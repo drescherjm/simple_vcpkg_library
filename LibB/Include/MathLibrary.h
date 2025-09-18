@@ -1,7 +1,7 @@
 // MathLibrary.h - Contains declarations of math functions
 #pragma once
 
-#include "simple_vcpkg_library_LibB_Export.h"
+#include "SimpleLibraryExample_LibB_Export.h"
 
 // The Fibonacci recurrence relation describes a sequence F
 // where F(n) is { n = 0, a
@@ -15,16 +15,16 @@
 // Initialize a Fibonacci relation sequence
 // such that F(0) = a, F(1) = b.
 // This function must be called before any other function.
-extern "C" SIMPLE_VCPKG_LIBRARY_LIBB_MATHLIBRARY_API void fibonacci_init(
+extern "C" SIMPLELIBRARYEXAMPLE_LIBB_MATHLIBRARY_API void fibonacci_init(
     const unsigned long long a, const unsigned long long b);
 
 // Produce the next value in the sequence.
 // Returns true on success and updates current value and index;
 // false on overflow, leaves current value and index unchanged.
-extern "C" SIMPLE_VCPKG_LIBRARY_LIBB_MATHLIBRARY_API bool fibonacci_next();
+extern "C" SIMPLELIBRARYEXAMPLE_LIBB_MATHLIBRARY_API bool fibonacci_next();
 
 // Get the current value in the sequence.
-extern "C" SIMPLE_VCPKG_LIBRARY_LIBB_MATHLIBRARY_API unsigned long long fibonacci_current();
+extern "C" SIMPLELIBRARYEXAMPLE_LIBB_MATHLIBRARY_API unsigned long long fibonacci_current();
 
 // Get the position of the current value in the sequence.
-extern "C" SIMPLE_VCPKG_LIBRARY_LIBB_MATHLIBRARY_API unsigned fibonacci_index();
+extern "C" SIMPLELIBRARYEXAMPLE_LIBB_MATHLIBRARY_API unsigned fibonacci_index();
