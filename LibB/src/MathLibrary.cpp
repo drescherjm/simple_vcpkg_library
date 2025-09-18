@@ -1,3 +1,6 @@
+// Based on Microsoft Learn example: Creating and Using a DLL in C++
+// https://learn.microsoft.com/en-us/cpp/build/walkthrough-creating-and-using-a-dynamic-link-library-cpp
+
 // MathLibrary.cpp : Defines the exported functions for the DLL.
 
 #include <utility>

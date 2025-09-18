@@ -1,5 +1,11 @@
 # simple_vcpkg_library
-This repository creates a very simple test library that simple_vcpkg_library_test_application will consume using vcpkg in manifest mode.
+This repository creates a very simple test library that [simple_vcpkg_library_test_application](https://github.com/drescherjm/simple_vcpkg_library_application) will consume using vcpkg in manifest mode.
 
-# Note: 
-The code was taken from the following Microsoft MSDN example: https://learn.microsoft.com/en-us/cpp/build/walkthrough-creating-and-using-a-dynamic-link-library-cpp?view=msvc-170
+## Attribution
+
+This project includes adapted code from Microsoft Learn:
+[Walkthrough: Creating and Using a DLL in C++](https://learn.microsoft.com/en-us/cpp/build/walkthrough-creating-and-using-a-dynamic-link-library-cpp)
+
+Original content © Microsoft. Used under the terms of the [Microsoft Learn Content License](https://learn.microsoft.com/en-us/legal/terms#MICROSOFT-LEARN-CONTENT).
+
+
