@@ -3,7 +3,7 @@ cmake_policy(SET CMP0074 NEW)
 
 set(CMAKE_CXX_STANDARD 17)
 
-project(simple_vcpkg_library)
+project(simple-vcpkg-library)
 
 if(CMAKE_INSTALL_PREFIX_INITIALIZED_TO_DEFAULT)
     if(DEFINED ENV{CMAKE_INSTALL_PREFIX})
