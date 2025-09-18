@@ -5,13 +5,6 @@ set(CMAKE_CXX_STANDARD 17)
 
 project(SimpleLibraryExample)
 
-if(CMAKE_INSTALL_PREFIX_INITIALIZED_TO_DEFAULT)
-    if(DEFINED ENV{CMAKE_INSTALL_PREFIX})
-		set(CMAKE_INSTALL_PREFIX "$ENV{CMAKE_INSTALL_PREFIX}/${PROJECT_NAME}" 
-			CACHE PATH "Force path to set CMAKE_INSTALL_PREFIX" FORCE)
-	endif()
-endif(CMAKE_INSTALL_PREFIX_INITIALIZED_TO_DEFAULT)
-
 #########################################################################################
 
 option(BUILD_SHARED_LIBS "Build shared libraries (.dll/.so) instead of static ones (.lib/.a)" ON)
@@ -26,13 +19,15 @@ include(GNUInstallDirs)
 add_subdirectory(LibB)
 
 #########################################################################################
+# This section is essential for the dependent library targets to be properly exported
+# for vcpkg to consume the library target(s) for this project.
 
 include(CMakePackageConfigHelpers)
 
 # Export all targets
 install(EXPORT ${PROJECT_NAME}Targets
     FILE ${PROJECT_NAME}Targets.cmake
-    NAMESPACE LibEX::
+    NAMESPACE LibEX:: # Give each library a namespace which will create an alias library
     DESTINATION ${CMAKE_INSTALL_LIBDIR}/cmake/${PROJECT_NAME}
 )
 
