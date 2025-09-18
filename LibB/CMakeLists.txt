@@ -35,12 +35,6 @@ target_precompile_headers(${LOCAL_TARGET_NAME}
 	<limits.h>
 )
 
-target_include_directories(LibA
-    PUBLIC
-        $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>
-        $<INSTALL_INTERFACE:include>
-)
-
 install(TARGETS ${LOCAL_TARGET_NAME}
     EXPORT ${PROJECT_NAME}Targets
     RUNTIME DESTINATION ${CMAKE_INSTALL_BINDIR}
